@@ -1,4 +1,4 @@
-function Hq = bestexemplar(img,Ip,toFill,sourceRegion,rows,cols)%,var)
+function Hq = bestexemplar(img,Ip,toFill,sourceRegion,rows,cols)
     % Scans over the entire image (with a sliding window)
     % for the exemplar with the lowest error.
     
@@ -36,10 +36,6 @@ function Hq = bestexemplar(img,Ip,toFill,sourceRegion,rows,cols)%,var)
 
                 if (patchErr <= bestErr) %Update
                     bestErr = patchErr;
-    %                 if(var==14)
-    %                     a = img(j:J,i:I,:);a;
-    %                     imshow(uint8(a));figure
-    %                 end
                     best(1,1) = j; best(1,2) = J;
                     best(1,3) = i; best(1,4) = I;
             
