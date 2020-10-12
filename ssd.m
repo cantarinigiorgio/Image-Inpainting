@@ -3,7 +3,6 @@ function [ssdout] = ssd(Ip,patch,toFill)
     %in case of RGB images compute the mean of the difference of each
     %channel and then return the mean of the three values
     
-    %%PROVARE CON ALTRI MODELLI DI COLORE
     Ip=double(Ip);
     patch=double(patch);
     ssdout = 0;
